@@ -1,3 +1,4 @@
+
 ---
 import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
@@ -28,52 +29,19 @@ const work = await Promise.all(
   })
 );
 
+
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Hello, I'm Nathan
-    </h4>
-    <div class="space-y-16">
-      <section>
-        <article class="space-y-4">
-          <p class="animate">
-          I'm an iOS developer who’s been building Swift apps since 2017. I care a lot about writing intentional, performant code. These days I’ve been spending a good chunk of my time writing Go, which has been a good challenge.<br />
-          Lately, I’ve been working on an F1 live timing dashboard, using Go, BubbleTea, and the OpenF1 API. You can check it out 
-          <Link href="/projects/" aria-label="Pitwall project link" external>
-                here
-          </Link>.
-          <br />
-          When I'm not writing code, I’m on a motorcycle, tennis court, or watching F1. I'm based in Utah.
-          </p>
-        </article>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
           Let's Connect
         </h5>
         <article>
-          <p> If you want to get in touch, I'd love to hear from you. Feel free to reach out via email or find me on github. </p>
+          <p>
+          If you want to get in touch, I'd love to hear from you. Feel free to reach out via email or find me on github.
+          </p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
@@ -91,6 +59,5 @@ const work = await Promise.all(
           </li>
         </ul>
       </section>
-    </div>
   </Container>
 </PageLayout>

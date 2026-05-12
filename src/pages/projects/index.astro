@@ -5,9 +5,16 @@ import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import { PROJECTS } from "@consts";
 
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const collection = (await getCollection("projects"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+
+const projects = await Promise.all(
+  collection.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
 ---
 
 <PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
@@ -16,15 +23,30 @@ const projects = (await getCollection("projects"))
       <div class="animate font-semibold text-black dark:text-white">
         Projects
       </div>
-      <ul class="animate flex flex-col gap-4">
-        {
-          projects.map((project) => (
-            <li>
-              <ArrowCard entry={project}/>
+      <ul class="flex flex-col space-y-4">
+        { 
+          projects.map(project => (
+            <li class="animate">
+                <div class="text-sm opacity-75">
+                    {project.data.date}
+              </div>
+              <div class="font-semibold text-black dark:text-white">
+                {project.data.description}
+              </div>
+              <div class="text-sm opacity-75">
+                {project.data.demoURL}
+              </div>
+              <article>
+                <project.Content />
+              </article>
             </li>
           ))
         }
       </ul>
+<!-- 
+      <ul class="animate flex flex-col gap-4">
+
+      </ul> -->
     </div>
   </Container>
 </PageLayout>
