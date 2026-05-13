@@ -2,13 +2,12 @@
 import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
 import { formatDate } from "@lib/utils";
 import { PROJECTS } from "@consts";
 
 
 const collection = (await getCollection("projects"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
 const projects = await Promise.all(
   collection.map(async (item) => {
