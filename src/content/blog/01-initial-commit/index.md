@@ -13,7 +13,7 @@ Outside of work, I enjoy riding motorcycles, playing tennis, watching F1, and re
 That's about it. More soon.
 
 #### Site Technologies
-Framework: [Astro](https://astro.build/)
-Theme: [Astro Nano](https://github.com/markhorn-dev/astro-nano)
+Framework: [Astro](https://astro.build/)<br>
+Theme: [Astro Nano](https://github.com/markhorn-dev/astro-nano)<br>
 Hosting: [GitHub Pages](https://docs.github.com/en/pages)
 
