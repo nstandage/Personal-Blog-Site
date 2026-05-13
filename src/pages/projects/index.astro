@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
+import { formatDate } from "@lib/utils";
 import { PROJECTS } from "@consts";
 
 
@@ -28,13 +29,13 @@ const projects = await Promise.all(
           projects.map(project => (
             <li class="animate">
                 <div class="text-sm opacity-75">
-                    {project.data.date}
+                    {formatDate(project.data.date)}
               </div>
               <div class="font-semibold text-black dark:text-white">
-                {project.data.description}
+                  {project.data.title} - {project.data.description}
               </div>
               <div class="text-sm opacity-75">
-                {project.data.demoURL}
+                  <a href={project.data.repoURL}>Github</a>
               </div>
               <article>
                 <project.Content />

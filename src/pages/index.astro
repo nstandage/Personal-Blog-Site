@@ -32,6 +32,11 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
+    <img
+      src="/headshot.png"
+      alt="Nathan Standage"
+      class="animate w-20 h-20 rounded-full object-cover mb-4"
+    />
     <h4 class="animate font-semibold text-black dark:text-white">
       Hello, I'm Nathan
     </h4>
@@ -39,7 +44,7 @@ const work = await Promise.all(
       <section>
         <article class="space-y-4">
           <p class="animate">
-          I'm an iOS developer who’s been building Swift apps since 2017. I care a lot about writing intentional, performant code. These days I’ve been spending a good chunk of my time writing Go, which has been a good challenge.<br />
+          I'm an iOS developer who’s been building Swift apps since 2017. I care a lot about writing intentional, performant code. These days I’ve been spending a good chunk of time writing Go.<br />
           Lately, I’ve been working on an F1 live timing dashboard, using Go, BubbleTea, and the OpenF1 API. You can check it out 
           <Link href="/projects/" aria-label="Pitwall project link" external>
                 here
