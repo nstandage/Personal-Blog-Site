@@ -1,7 +1,7 @@
 ---
 title: "Initial Commit"
 description: "My first blog post!"
-date: "May 12 2026"
+date: "May 13 2026"
 ---
 
 Hello, my name is Nathan. I'm a software developer and musician, and this is my new corner of the internet.
