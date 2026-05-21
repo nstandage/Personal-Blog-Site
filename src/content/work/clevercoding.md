@@ -5,8 +5,10 @@ dateStart: "10/01/2020"
 dateEnd: "05/27/2022"
 ---
 
-iOS developer serving as the sole iOS engineer across multiple concurrent projects ranging from a peer-to-peer adventure gear rental marketplace to a white-label dental patient management platform
-- Architected and developed multiple iOS apps from scratch to the beta testing phase
-- Enhanced and maintained shared Swift networking library used across all company projects, improving code reusability and development efficiency
+[Clever Coding](https://www.clevercoding.com) is a local software development studio based in Utah.
 
-Technologies: `Swift`, `UIKit`, `Vue.js`, `RESTful API`, `Alamofire`
+- Acted as sole iOS developer for 5 apps in various stages of development
+- Onboarded and mentored a new iOS hire across 2 applications, accelerating ramp-up through architecture walkthroughs and hands-on bug resolution
+- Optimized a shared networking package, to ensure consistency across the company's entire app portfolio, using AlamoFire and Apple’s Combine framework
+
+Technologies: `Swift`, `UIKit`, `Vue.js`, `RESTful API`, `Alamofire`, `Combine`, `SwiftUI`

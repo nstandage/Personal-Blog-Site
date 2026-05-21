@@ -1,6 +1,6 @@
 ---
 title: "Pitwall"
-description: "F1 Live Timing Dashboard"
+description: "A Better Timing Tower"
 date: "April 1 2026"
 demoURL: "https://github.com/nstandage/f1-go-cli-app"
 repoURL: "https://github.com/nstandage/f1-go-cli-app"
@@ -11,7 +11,7 @@ Pitwall is a terminal UI app that replays data from historical F1 races as if th
 
 This is a work in progress.
 
-![pitwall_example_screenshot](./pitwall_example_screenshot.png)
+![pitwall_demo_gif](./../../../public/pitwall_demo.gif)
 
 #### What It Displays
 * **Driver standings** — position, interval to car ahead, gap to race leader, and last lap time
